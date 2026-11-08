@@ -1,0 +1,60 @@
+/* =============================================
+   SANTO TOMÁS DE AQUINO — Variables CSS (:root)
+   ============================================= */
+
+:root {
+  /* Paleta institucional */
+  --azul:         #1a3a5c;
+  --azul-oscuro:  #0d2137;
+  --azul-medio:   #2a5a8c;
+  --azul-claro:   #4a90c4;
+  --dorado:       #c8a84b;
+  --blanco:       #ffffff;
+
+  /* Fondos y superficies */
+  --bg-body:      #f0f4f8;
+  --gris-suave:   #f4f7fb;
+  --gris-borde:   #e2e8f0;
+  --gris-hover:   #f8fafc;
+  --gris-divisor: #edf2f7;
+
+  /* Textos */
+  --texto:        #2d3748;
+  --texto-medio:  #4a5568;
+  --texto-suave:  #718096;
+  --texto-muted:  #a0aec0;
+
+  /* Semánticos y Roles */
+  --exito-bg:     #d8f3dc;
+  --exito-txt:    #1b4332;
+  --exito-accent: #2d6a4f;
+
+  --alerta-bg:    #fff3cd;
+  --alerta-txt:   #7b4d00;
+  --alerta-accent:#e9a000;
+
+  --peligro-bg:   #fde2e2;
+  --peligro-txt:  #842029;
+  --peligro-btn:  #c0392b;
+  --peligro-hover:#962d22;
+
+  --admin-bg:     #ffd6dd;
+  --admin-txt:    #6b2737;
+
+  /* Tipografía */
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif:   'Playfair Display', Georgia, serif;
+
+  /* Radios y Sombras */
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;
+  --radius-xl:    20px;
+  --radius-pill:  50px;
+
+  --shadow-sm:    0 2px 10px rgba(0, 0, 0, 0.06);
+  --shadow-md:    0 2px 16px rgba(0, 0, 0, 0.07);
+  --shadow-lg:    0 10px 40px rgba(0, 0, 0, 0.2);
+  --shadow-xl:    0 20px 60px rgba(0, 0, 0, 0.35);
+}
+

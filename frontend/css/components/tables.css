@@ -1,0 +1,91 @@
+/* =============================================
+   SANTO TOMÁS DE AQUINO — Tablas
+   ============================================= */
+
+.tabla-wrapper {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gris-divisor);
+  white-space: nowrap;
+}
+
+.tabla-usuarios th {
+  color: var(--texto-muted);
+  font-size: 0.73rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.tabla-usuarios tbody tr:hover {
+  background: var(--gris-hover);
+}
+
+.tabla-usuarios tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.celda-vacia {
+  text-align: center !important;
+  color: var(--texto-muted);
+  padding: 2rem 1rem !important;
+  white-space: normal !important;
+}
+
+/* Cabecera de tabla con buscador interno */
+.tabla-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tabla-header h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--azul);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tabla-header input {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-sm);
+  min-width: 180px;
+}
+
+@media (max-width: 768px) {
+  .tabla-usuarios th,
+  .tabla-usuarios td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabla-header input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+

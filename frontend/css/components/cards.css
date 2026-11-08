@@ -1,0 +1,300 @@
+/* =============================================
+   SANTO TOMÁS DE AQUINO — Tarjetas (Cards)
+   ============================================= */
+
+/* Tarjeta de bienvenida */
+.welcome-card {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.welcome-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.avatar-estudiante    { background: var(--exito-bg); color: var(--exito-accent); }
+.avatar-profesor      { background: var(--alerta-bg); color: var(--alerta-txt); }
+.avatar-administrador { background: var(--admin-bg); color: var(--admin-txt); }
+
+.welcome-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--azul);
+  margin: 0 0 0.2rem;
+}
+
+.welcome-card p {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+  margin: 0;
+}
+
+/* Tarjetas de información de cuenta */
+.info-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card .ic-label {
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: var(--texto-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
+}
+
+.info-card .ic-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* Panel contenedor (Quick panel) */
+.quick-panel {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.quick-panel h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--texto-medio);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 1rem;
+}
+
+/* Tarjetas de Comunicados */
+.comunicado-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--azul);
+  transition: box-shadow 0.2s;
+}
+.comunicado-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.comunicado-card.inactivo {
+  border-left-color: var(--texto-muted);
+  opacity: 0.7;
+}
+.comunicado-titulo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--azul);
+  margin: 0 0 0.3rem;
+}
+.comunicado-meta {
+  font-size: 0.78rem;
+  color: var(--texto-muted);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.comunicado-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.comunicado-contenido {
+  font-size: 0.88rem;
+  color: var(--texto-medio);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  margin-bottom: 0.75rem;
+}
+.sin-comunicados {
+  text-align: center;
+  color: var(--texto-muted);
+  padding: 3rem 1rem;
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.sin-comunicados i {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Tarjetas de Reportes */
+.reporte-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.reporte-card.skeleton {
+  min-height: 90px;
+  background: linear-gradient(90deg, #f0f4f8 25%, #e2e8f0 50%, #f0f4f8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.reporte-card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+.reporte-card-valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--azul);
+  line-height: 1;
+}
+.reporte-card-label {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+
+.grafico-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+.grafico-card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--azul);
+  margin: 0 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Tarjetas de Configuración */
+.config-card {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+}
+.config-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gris-divisor);
+}
+.config-card-header i {
+  font-size: 1.2rem;
+  color: var(--azul);
+}
+.config-card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+/* Tarjetas de Resumen de Asistencia (Estudiante) */
+.resumen-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 1.25rem;
+  text-align: center;
+}
+.resumen-card .valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--azul);
+  line-height: 1.1;
+}
+.resumen-card .etiqueta {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  margin-top: 0.3rem;
+}
+.resumen-card.total .valor { color: var(--azul); }
+.resumen-card.asistio .valor { color: var(--exito-accent); }
+.resumen-card.tardanza .valor,
+.resumen-card.tardanza_justificada .valor { color: var(--alerta-txt); }
+.resumen-card.falta .valor,
+.resumen-card.falta_justificada .valor { color: var(--peligro-hover); }
+
+/* Ítems de Actividades */
+.actividad-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--gris-divisor);
+  transition: background 0.2s;
+}
+.actividad-item:hover { background: var(--gris-hover); }
+.actividad-item:last-child { border-bottom: none; }
+.actividad-icono {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.icono-login               { background: #e0edff; color: #1a3a5c; }
+.icono-usuario_crear       { background: #d8f3dc; color: #2d6a4f; }
+.icono-usuario_editar      { background: #fff3cd; color: #7b4d00; }
+.icono-usuario_eliminar    { background: #fde2e2; color: #c0392b; }
+.icono-curso_crear         { background: #d8f3dc; color: #2d6a4f; }
+.icono-curso_editar        { background: #fff3cd; color: #7b4d00; }
+.icono-curso_eliminar      { background: #fde2e2; color: #c0392b; }
+.icono-comunicado_crear    { background: #e0edff; color: #1a3a5c; }
+.icono-comunicado_editar   { background: #fff3cd; color: #7b4d00; }
+.icono-comunicado_eliminar { background: #fde2e2; color: #c0392b; }
+.icono-matricula_crear     { background: #d8f3dc; color: #2d6a4f; }
+.icono-matricula_eliminar  { background: #fde2e2; color: #c0392b; }
+.icono-config              { background: #e2e8f0; color: #4a5568; }
+.actividad-accion {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+.actividad-detalle {
+  font-size: 0.82rem;
+  color: var(--texto-suave);
+  margin-top: 0.1rem;
+}
+.actividad-meta {
+  font-size: 0.73rem;
+  color: var(--texto-muted);
+  margin-top: 0.2rem;
+}
+.actividad-contenido { flex: 1; }
+

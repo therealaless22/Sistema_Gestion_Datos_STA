@@ -1,0 +1,361 @@
+/* =============================================
+   SANTO TOMÁS DE AQUINO — Landing Page Layout
+   ============================================= */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/images/colegio.jpg');
+  background-size: cover;
+  background-position: center top;
+  transform: scale(1.04);
+  transition: transform 8s ease;
+}
+
+.hero-bg.loaded {
+  transform: scale(1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 33, 55, 0.72) 0%,
+    rgba(13, 33, 55, 0.55) 50%,
+    rgba(13, 33, 55, 0.80) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  max-width: 760px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(200, 168, 75, 0.2);
+  border: 1px solid rgba(200, 168, 75, 0.6);
+  color: var(--dorado);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.2rem;
+}
+
+.hero-titulo {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  color: var(--blanco);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.hero-titulo span {
+  color: var(--dorado);
+}
+
+.hero-subtitulo {
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-lema {
+  font-size: clamp(0.82rem, 1.8vw, 0.95rem);
+  color: var(--dorado);
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+.fade-section {
+  background: linear-gradient(180deg, rgba(13, 33, 55, 0.15) 0%, var(--gris-suave) 80px);
+  padding-top: 4rem;
+}
+
+.seccion {
+  padding: 4rem 1.5rem;
+  background: var(--gris-suave);
+}
+
+.seccion-titulo {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--azul);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-sub {
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  margin-bottom: 2.5rem;
+}
+
+.linea-dorada {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--dorado);
+  border-radius: 2px;
+  margin: 0.5rem auto 2.5rem;
+}
+
+.niveles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nivel-card {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 16px rgba(26, 58, 92, 0.08);
+  border-top: 3px solid var(--dorado);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.nivel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(26, 58, 92, 0.14);
+}
+.nivel-card i {
+  font-size: 2rem;
+  color: var(--azul-claro);
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+.nivel-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 0.3rem;
+}
+.nivel-card p {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+/* Sobre nosotros */
+.seccion-azul {
+  background: var(--azul);
+  padding: 4rem 1.5rem;
+  color: var(--blanco);
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.sobre-texto h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: var(--blanco);
+  margin-bottom: 0.5rem;
+}
+
+.sobre-texto .linea-dorada {
+  margin: 0.5rem 0 1.25rem;
+}
+
+.sobre-texto p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  font-size: 0.92rem;
+  margin-bottom: 0.85rem;
+}
+
+.valores-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.valores-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.valores-lista li i {
+  color: var(--dorado);
+  font-size: 0.9rem;
+}
+
+/* Contacto */
+.seccion-contacto {
+  padding: 4rem 1.5rem;
+  background: var(--gris-suave);
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.contacto-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  box-shadow: 0 2px 12px rgba(26, 58, 92, 0.06);
+  border-top: 3px solid var(--dorado);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 0;
+}
+
+.contacto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(26, 58, 92, 0.14);
+}
+
+.contacto-card .icono-circulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(74, 144, 196, 0.12);
+  flex-shrink: 0;
+}
+
+.contacto-info {
+  width: 100%;
+  min-width: 0;
+}
+
+.contacto-card i {
+  font-size: 1.7rem;
+  color: var(--azul-claro);
+}
+
+.contacto-card .label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--texto-suave);
+}
+
+.contacto-card .valor {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--azul);
+  line-height: 1.5;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.contacto-card a {
+  color: var(--azul);
+  text-decoration: none;
+}
+.contacto-card a:hover {
+  text-decoration: underline;
+}
+
+.redes-fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.red-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  text-decoration: none !important;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+.red-icono:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+.red-facebook { background: #1877f2; color: var(--blanco); }
+.red-tiktok   { background: #000000; color: var(--blanco); }
+
+.footer-landing {
+  background: var(--azul-oscuro);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 1.75rem 1rem;
+  font-size: 0.8rem;
+}
+.footer-landing span {
+  color: var(--dorado);
+}
+
+@media (max-width: 768px) {
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+

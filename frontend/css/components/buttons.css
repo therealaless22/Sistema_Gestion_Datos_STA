@@ -1,0 +1,172 @@
+/* =============================================
+   SANTO TOMÁS DE AQUINO — Botones
+   ============================================= */
+
+.btn-primario,
+.btn-secundario,
+.btn-peligro {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primario {
+  background: var(--azul);
+  color: var(--blanco);
+}
+.btn-primario:hover:not(:disabled) {
+  background: var(--azul-oscuro);
+}
+.btn-primario:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secundario {
+  background: var(--gris-borde);
+  color: var(--texto-medio);
+}
+.btn-secundario:hover:not(:disabled) {
+  background: #cbd5e0;
+}
+
+.btn-peligro {
+  background: var(--peligro-btn);
+  color: var(--blanco);
+}
+.btn-peligro:hover:not(:disabled) {
+  background: var(--peligro-hover);
+}
+
+/* Botones de iconos en tablas */
+.acciones-cell {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.btn-icono {
+  border: 1px solid var(--gris-borde);
+  background: var(--blanco);
+  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--texto-medio);
+  transition: all 0.2s;
+}
+.btn-icono:hover {
+  border-color: var(--azul);
+  color: var(--azul);
+}
+.btn-icono.icono-eliminar:hover {
+  border-color: var(--peligro-btn);
+  color: var(--peligro-btn);
+}
+
+/* Accesos rápidos del dashboard */
+.quick-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.1rem 0.75rem;
+  border: 2px solid var(--gris-borde);
+  border-radius: var(--radius-md);
+  background: var(--gris-hover);
+  color: var(--texto-medio);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+  text-align: center;
+}
+.quick-btn i {
+  font-size: 1.5rem;
+}
+.quick-btn:hover {
+  border-color: var(--azul);
+  background: #eef4fb;
+  color: var(--azul);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 58, 92, 0.12);
+}
+
+/* Botón salir del navbar */
+.btn-salir {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--blanco);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.btn-salir:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Enlace de retorno */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--texto-suave);
+  text-decoration: none;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+.back-link:hover {
+  color: var(--azul);
+}
+
+/* Botón principal de login */
+.btn-login {
+  background: linear-gradient(135deg, var(--azul), var(--azul-medio));
+  color: var(--blanco);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 0.02em;
+  width: 100%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.btn-login:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  color: var(--blanco);
+}
+.btn-login:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+

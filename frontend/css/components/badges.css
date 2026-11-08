@@ -1,0 +1,179 @@
+/* =============================================
+   SANTO TOMÁS DE AQUINO — Badges, Tags, Alertas y Gráficos
+   ============================================= */
+
+/* Badges de Rol en Navbar */
+.badge-rol {
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-estudiante    { background: var(--exito-accent); color: var(--exito-bg); }
+.badge-profesor      { background: var(--alerta-txt);   color: var(--alerta-bg); }
+.badge-administrador { background: var(--admin-txt);    color: var(--admin-bg); }
+
+/* Tags en Tablas y Tarjetas */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.73rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.tag-estudiante    { background: var(--exito-bg);  color: var(--exito-accent); }
+.tag-profesor      { background: var(--alerta-bg); color: var(--alerta-txt); }
+.tag-administrador { background: var(--admin-bg);  color: var(--admin-txt); }
+
+.tag-activo   { background: var(--exito-bg);    color: var(--exito-txt); }
+.tag-inactivo { background: var(--gris-borde);  color: var(--texto-suave); }
+.tag-revision { background: var(--alerta-bg);   color: var(--alerta-txt); }
+.tag-nota     { background: #dbeafe;            color: #1e3a8a; font-weight: 700; }
+
+/* Destinatario de comunicados */
+.badge-dirigido {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.badge-estudiantes { background: var(--exito-bg);  color: var(--exito-accent); }
+.badge-profesores  { background: var(--alerta-bg); color: var(--alerta-txt); }
+.badge-todos       { background: #e0edff;          color: var(--azul); }
+
+/* Escala de calificación: AD / A / B / C */
+.escala-ad { background: var(--exito-accent); color: var(--blanco); font-weight: 700; }
+.escala-a  { background: var(--exito-bg);     color: var(--exito-txt); font-weight: 700; }
+.escala-b  { background: var(--alerta-bg);    color: var(--alerta-txt); font-weight: 700; }
+.escala-c  { background: #ffd6d6;             color: var(--peligro-hover); font-weight: 700; }
+
+.tag-nota-escala {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.25rem 0.7rem;
+}
+.tag-nota-escala .separador-nota {
+  width: 1px;
+  height: 14px;
+  background: currentColor;
+  opacity: 0.35;
+}
+.tag-nota-escala .nota-valor,
+.tag-nota-escala .nota-letra {
+  line-height: 1;
+}
+
+/* Alertas */
+.alert-box {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.alert-box.exito {
+  background: var(--exito-bg);
+  color: var(--exito-txt);
+}
+
+.alert-box.error {
+  background: var(--peligro-bg);
+  color: var(--peligro-txt);
+}
+
+/* Barras y Estados (Reportes) */
+.barras-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.barra-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+}
+
+.barra-label {
+  min-width: 130px;
+  color: var(--texto-medio);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.barra-track {
+  flex: 1;
+  background: var(--gris-divisor);
+  border-radius: var(--radius-xl);
+  height: 10px;
+  overflow: hidden;
+}
+
+.barra-fill {
+  height: 100%;
+  border-radius: var(--radius-xl);
+  background: var(--azul);
+  transition: width 0.8s ease;
+}
+
+.barra-fill.color-estudiante    { background: var(--exito-accent); }
+.barra-fill.color-profesor      { background: var(--alerta-accent); }
+.barra-fill.color-administrador { background: var(--peligro-btn); }
+.barra-fill.color-grado         { background: var(--azul); }
+
+.barra-valor {
+  min-width: 24px;
+  text-align: right;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.estado-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.estado-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.estado-circulo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--blanco);
+}
+
+.estado-circulo.activo   { background: var(--exito-accent); }
+.estado-circulo.inactivo { background: var(--texto-muted); }
+
+.estado-label {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+

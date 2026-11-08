@@ -1,0 +1,152 @@
+/* =============================================
+   SANTO TOMÁS DE AQUINO — Formularios e Inputs
+   ============================================= */
+
+/* Filtros de listado */
+.filtros {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filtros input,
+.filtros select {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-sm);
+  background: var(--blanco);
+  color: var(--texto);
+}
+
+.filtros input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filtros select {
+  min-width: 160px;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+  outline: none;
+  border-color: var(--azul);
+}
+
+/* Grupos de formulario */
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--texto-medio);
+  margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-sm);
+  background: var(--blanco);
+  color: var(--texto);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--azul);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background: #f7fafc;
+  color: var(--texto-muted);
+  cursor: not-allowed;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.73rem;
+  color: var(--texto-muted);
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+/* Inputs en tablas (notas / asistencia) */
+.input-tabla-numero {
+  width: 80px;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.input-tabla-texto {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+
+.select-tabla {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-sm);
+  min-width: 180px;
+  background: var(--blanco);
+}
+
+@media (max-width: 560px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .filtros {
+    flex-direction: column;
+  }
+  .filtros input,
+  .filtros select {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
