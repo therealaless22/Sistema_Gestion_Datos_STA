@@ -13,14 +13,14 @@ DB_USER=sa
 DB_PASSWORD=tu_password (del sql server management)
 JWT_SECRET=cambia_este_secreto_por_uno_largo_y_aleatorio
 JWT_EXPIRES_IN=8h
-4. Levantar el backend y frontend:
+5. Levantar el backend y frontend:
 cd backend
 npm install
 npm run dev -> Luego de instalar npm solo ejecutar esto para lanzar el backend.
 **Salida de Terminal si todo fue un éxito**
 🚀 Servidor corriendo en http://localhost:3000
 ✅ Conectado a SQL Server correctamente.
-5. Abrir "http://localhost:3000" en un navegador y ya podrás acceder a la página web.
+6. Abrir "http://localhost:3000" en un navegador y ya podrás acceder a la página web.
 
 -- Si usas docker, lee "backend/README.md"
 
